@@ -5,7 +5,7 @@ Description:-WAP to count number of set bits in a given number and print parity
 sample execution:-
 Enter the number : 7
 Number of set bits = 3
-Bit parity is Odd
+Bit parity is Odd.
 */
 #include<stdio.h>
 int main()
