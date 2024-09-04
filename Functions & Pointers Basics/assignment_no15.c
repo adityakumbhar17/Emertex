@@ -12,6 +12,7 @@ Enter number of bits: 3
 Result = 2
 */
 
+
 #include <stdio.h>
 
 int get_nbits(int num, int n)
