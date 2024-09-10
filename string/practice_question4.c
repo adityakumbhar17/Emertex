@@ -1,4 +1,4 @@
-//program to count the only digits from the strings
+//program to add the only digits from the strings
 #include<stdio.h>
 #include<string.h>
 int sum_number(char *str,int sum)
