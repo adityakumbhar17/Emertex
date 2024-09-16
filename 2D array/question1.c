@@ -1,3 +1,4 @@
+//finde the average of the each element of coulmns
 #include <stdio.h>
 
 int main() 
