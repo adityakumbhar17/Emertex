@@ -299,7 +299,7 @@ void search()
 	else if (match_count == 1)
 	 {
 		// If only one match is found, print the details
-        printf("********************************************\n");
+                printf("********************************************\n");
 		printf("\t\tContact\t");
 		printf("\n*********************************************\n");
 		printf("Name ID  : %s\n", matched_contacts[0].name);
@@ -330,8 +330,8 @@ void search()
 				if (strcmp(matched_contacts[j].mobile, mobile_i) == 0)      // if the mobile number is match with any mobile number with our same name contacts then print tahat index 
 				{
 					printf("********************************************\n");
-				    printf("\t\tContact no %d\t",j);
-				    printf("\n*********************************************\n");
+				        printf("\t\tContact no %d\t",j);
+				        printf("\n*********************************************\n");
 					printf("Name ID  : %s\n", matched_contacts[j].name);
 					printf("Mobile   : %s\n", matched_contacts[j].mobile);
 					printf("Email ID : %s\n", matched_contacts[j].email);
@@ -351,7 +351,7 @@ void search()
 				if (strcmp(matched_contacts[j].email, email_i) == 0)    //if any email address is matched with our email address then print that data.
 				{
 
-                    printf("********************************************\n");
+                                    printf("********************************************\n");
 				    printf("\t\tContact no %d\t",j);
 				    printf("\n*********************************************\n");
 					printf("Name ID   : %s\n", matched_contacts[j].name);
@@ -429,13 +429,13 @@ void edit()
 	int type;
 	printf("enter the option which you want to edit :\n 1.Name\n 2.Mobile_number\n 3.Gmail\n 4.Address\n Enter your choice: ");
 	scanf("%d",&type);
-	char name_i[30];                          //buffer
+	char mobile_id[30];                          //buffer
 	printf("Enter Name ID to Edit: ");
-	scanf(" %[^\n]", name_i);                        //buffer for store the temp name...
+	scanf(" %[^\n]",mobile_id);                        //buffer for store the temp name...
 	int i = 1;
 	while(i <= count){
 		fscanf(fdata,"%[^,],%[^,],%[^,],%[^\n]\n", contacts.name, contacts.mobile, contacts.email, contacts.address);
-		if(strcmp(contacts.name,name_i) == 0)
+		if(strcmp(contacts.mobile,mobile_id) == 0)
 		{
 			switch(type)
 			{
