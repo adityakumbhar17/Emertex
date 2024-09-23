@@ -173,6 +173,92 @@ num = circularRightShift(num, 2);  // result is 01000001, which is 65 in decimal
 
 ---
 
+## Advanced Bitwise Operations and Techniques
+
+### 1. **Checking if a Number is Even or Odd**
+
+You can check if a number is even or odd by checking its least significant bit (LSB). If the LSB is `1`, the number is odd; otherwise, it's even.
+
+```c
+if (number & 1) {
+    printf("Odd\n");
+} else {
+    printf("Even\n");
+}
+```
+
+### 2. **Swapping Two Numbers Without a Temporary Variable**
+
+The XOR (`^`) operator can be used to swap two numbers without needing a third variable.
+
+```c
+a = a ^ b;
+b = a ^ b;
+a = a ^ b;
+```
+
+### 3. **Checking if a Number is a Power of Two**
+
+A number is a power of two if it has exactly one `1` bit in its binary representation.
+
+```c
+if (number > 0 && (number & (number - 1)) == 0) {
+    printf("Power of Two\n");
+} else {
+    printf("Not a Power of Two\n");
+}
+```
+
+### 4. **Clearing the Lowest Set Bit**
+
+To clear the lowest set bit (the rightmost `1` bit) of a number, you can use:
+
+```c
+number = number & (number - 1);
+```
+
+**Example:**
+
+```c
+int number = 12; // 1100 in binary
+number = number & (number - 1); // result is 1000, which is 8 in decimal
+```
+
+### 5. **Isolating the Lowest Set Bit**
+
+To isolate the lowest set bit of a number, use:
+
+```c
+int lowestBit = number & -number;
+```
+
+**Example:**
+
+```c
+int number = 12; // 1100 in binary
+int lowestBit = number & -number; // result is 0100, which is 4 in decimal
+```
+
+### 6. **Setting Multiple Bits Using a Bitmask**
+
+You can set multiple bits to `1` using a bitmask. For example, to set bits at positions 2 and 4:
+
+```c
+int mask = (1 << 2) | (1 << 4);
+number = number | mask;
+```
+
+### 7. **Clearing Multiple Bits Using a Bitmask**
+
+Similarly, to clear multiple bits, you can use:
+
+```c
+int mask = ~((1 << 2) | (1 << 4));
+number = number & mask;
+```
+
+---
+
 ## Practical Applications of Bitwise Operations
 
 1. **Compression**: Bitwise operations are used to manipulate and compress data efficiently, minimizing storage space.
