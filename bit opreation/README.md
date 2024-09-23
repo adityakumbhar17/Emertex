@@ -9,7 +9,7 @@ Bitwise operators in C allow direct manipulation of individual bits of a number.
 | Operator | Description                                      | Example                          |
 |----------|--------------------------------------------------|----------------------------------|
 | `&`      | Bitwise AND: Sets each bit to `1` if both bits are `1` | `a & b`                          |
-| `|`      | Bitwise OR: Sets each bit to `1` if one of the bits is `1` | `a | b`                          |
+| '|'      | Bitwise OR: Sets each bit to `1` if one of the bits is `1` | `a | b`                          |
 | `^`      | Bitwise XOR: Sets each bit to `1` if only one of the bits is `1` | `a ^ b`                          |
 | `~`      | Bitwise NOT: Inverts all bits                     | `~a`                             |
 | `<<`     | Left shift: Shifts bits to the left by the specified number of positions | `a << 2`                         |
